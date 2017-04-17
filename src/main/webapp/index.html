@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Cycle Slideshow</title>
+
+<style>
+      
+   .centergal {
+       margin-right:  200px;
+   }
+   
+   .center {
+       margin: auto;
+   }
+   .body {
+       background: #00FFFF;
+   }
+   
+   
+  </style>
+
+<link href="resources/css/slideshow.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="resources/js/jquery.js"></script>
+<script type="text/javascript" src="resources/js/jquery.cycle.js"></script>
+
+
+<script type="text/javascript">
+    
+$(document).ready(function() {
+													 
+
+$('#gallery').cycle({
+	fx: 'scrollRight',
+	timeout: 3000,
+	speed: 700,
+	delay: -2000,
+	pager: '#pager',
+	next: '#next',
+	prev: '#prev'
+});
+
+$('#playControl').toggle(
+		function() {
+			$('#gallery').cycle('pause');
+			$(this).text('Play');
+		},
+		function() {
+			$('#gallery').cycle('resume');
+			$(this).text('Pause');
+		});
+
+}); // end ready()
+</script>
+</head>
+<body class="body" id="twoCol">
+    
+<div class="center" id="container">
+  
+  
+  <div id="contentWrap">
+ <div  id="main">
+  <h1 align="center">Cycle Slideshow Poshiv  Пошив</h1>
+  <div id="controls">
+  <span id="prev" class="control">Previous (Предыдущий)</span>
+    <span id="pager"></span>
+    <span id="next" class="control">Next (Следующий)</span>
+    <span id="playControl" class="control">Pause (Остановить)</span>
+  </div>
+  <div class="centergal" id="gallery">
+    
+    <div>
+    <img src="resources/images/large/1.jpg" width="50%" height="90%" alt="Blue">
+    <p class="credit">Photo 1</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/2.jpg" width="60%" height="90%" alt="Milk Fruit Explosion">
+    <p class="credit">Photo 2</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/3.jpg" width="60%" height="90%" alt="Fan">
+    <p class="credit">Photo 3</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/4.jpg" width="60%" height="90%" alt="Red">
+    <p class="credit">Photo 4</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/8.jpg" width="80%" height="80%" alt="Pink weight">
+    <p class="credit">Photo 5</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/6.jpg" width="80%" height="80%" alt="Blue">
+    <p class="credit">Photo 6</p>
+    </div>
+
+    <div>
+    <img src="resources/images/large/7.jpg" width="80%" height="80%" alt="Blue">
+    <p class="credit">Photo 7</p>
+    </div>
+  </div>
+
+
+  
+ </div>
+
+  
+  </div>
+ 
+</div>
+</body>
+</html>
